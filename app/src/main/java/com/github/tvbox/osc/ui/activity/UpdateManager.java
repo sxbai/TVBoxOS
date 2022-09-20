@@ -36,8 +36,8 @@ public class UpdateManager {
     private boolean isNew = false;
     private boolean intercept = false;
     // 下载安装包的网络路径
-    private String apkUrl = "https://***/***/update/"
-            + "GenerateAPK_release_v1.0.apk";
+    private String apkUrl = "http://3.36.153.51:52828/%E8%BF%85%E9%9B%B7%E4%BA%91%E7%9B%98/apk/"
+            + "舒夏影视.apk";
     // 保存APK的文件夹
     private static String savePath;
     //apk文件的绝对路径
@@ -81,8 +81,8 @@ public class UpdateManager {
         try {
             //下载网站的json数据包，根据数据包的版本来判断当前版本是否需要被替换
             //这里的StreamUtil().getjson()是我自己写的一个工具类，里面的getjson()方法能获取给定uri的json文件，小伙伴们可以自行搜索或者自力更生写一个工具类
-            String json = new StreamUtil().getjson("https://***/***/update/"
-                    + "output-metadata.json");
+            String json = new StreamUtil().getjson("http://3.36.153.51:52828/%E8%BF%85%E9%9B%B7%E4%BA%91%E7%9B%98/"
+                    + "update.json");
             JSONObject jo = new JSONObject(json);
             int versionCode = jo.getInt("versionCode");//获取版本代号
             Log.i("本软件版本号", Integer.toString(UpdateManager.getVersionCode(mContext)));

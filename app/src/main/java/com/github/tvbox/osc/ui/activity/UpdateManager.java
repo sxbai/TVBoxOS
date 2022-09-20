@@ -1,3 +1,5 @@
+package com.github.tvbox.osc.ui.activity;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,7 +18,7 @@ import android.widget.TextView;
  
 import androidx.core.content.FileProvider;
  
-import com.huang.uifinaldesign.register.R;
+import com.github.tvbox.osc.R;
  
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -111,7 +113,7 @@ public class UpdateManager {
     private void showUpdateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("软件版本更新");
-        builder.setMessage("有最新的软件包，是否下载!");
+        builder.setMessage("舒夏影视有最新版本，是否下载!");
         builder.setPositiveButton("下载", new DialogInterface.OnClickListener() {
  
             @Override
